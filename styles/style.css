@@ -93,7 +93,7 @@ body {
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: 1rem;
-    background-image: url(/assets/Muñeco.png);
+    background-image: url(../assets/NoTexto.png);
     background-position: top;
     background-repeat: no-repeat;
     background-color: white;
