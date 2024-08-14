@@ -1,5 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&display=swap');
+
+:root {
+    --colorPrincipal: #F3F9FB;
+    --colorSecundario: #45505b;
+    --colorTerciaro: #0A3871;
+    --colorHover: #ffffff;
+    --fuenteKrona: "Krona One", sans-serif;
+    --fuenteInter: "Inter", sans-serif;
+}
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--colorPrincipal);
+    color: var(--colorSecundario);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--fuenteInter);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: var(--colorTerciaro);
+    font-family: var(--fuenteKrona);
+    color: var(--colorHover);
+    gap: 2rem;
+    padding-left: 1rem;
+}
+
+.icon {
+    font-size: 4rem;
+}
+
+.seccion {
+    display: flex;
+    padding: 4rem;
+    gap: 4rem;
+}
+
+.seccion__entrada {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: rgba(0, 0, rgba(253, 253, 255, 0.13), alpha);
+    gap: 2rem;
+    align-items: center;
+}
+
+.seccion__salida {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: rgba(0, 0, rgba(253, 253, 255, 0.13), alpha);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seccion__entrada__texto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.seccion__salida__texto {
+    display: flex;
+    width: 100%;
+}
+
+
+.seccion__entrada__textarea {
+    font-size: 1.5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.1)
+}
+
+.seccion__salida__textarea {
+    height: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-image: url(/assets/Muñeco.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+}
+
+.area__boton1 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.boton__copiar {
+    display: none;
+}
+
+.mensaje {
+    position: relative;
+    font-size: 1rem;
+    bottom: 10rem;
+    font-weight: bold;
+    font-family: var(--fuenteInter);
+}
+
+.boton {
+    width: 16rem;
+    height: 4rem;
+    border-radius: 1.5rem;
+    align-items: center;
+    border: 2px solid var(--colorTerciaro);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--colorSecundario);
+    font-family: var(--fuenteInter);
+    justify-content: center;
+}
+
+.boton:hover {
+    background-color: var(--colorTerciaro);
+    color: var(--colorHover);
+    cursor: pointer;
+}
+
+.footer {
+    background-color: var(--colorTerciaro);
+    font-family: var(--fuenteKrona);
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--colorHover);
+}
+
+@media (max-width: 780px) {
+    .header{
+        font-size: 0.7rem;
+    }
+    .seccion {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 4rem;
+        gap: 2rem;
+        overflow: auto;
+    }
+    .seccion__entrada {
+        width: 100%;
+    }
+    .seccion__salida{
+        width: 100%;
+    }
+    .boton {
+        width: 14rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+    .mensaje {
+        bottom: 2rem;
+    }
+    .boton__copiar {
+        margin-top: 2rem;
+    }
+    .footer{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header{
+        font-size: 0.6rem;
+    }
+    .seccion {
+        font-size: 0.90rem;
+        padding: 2rem;
+    }
+    .boton {
+        width: 9rem;
+        height: 3rem;
+        font-size: 0.8rem;
+    }
+    .mensaje {
+        bottom: 2rem;
+    }
+    .boton__copiar {
+        margin-top: 2rem;
+    }
+    .footer{
+        font-size: 0.8rem;
+    }
 }
